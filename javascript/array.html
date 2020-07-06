@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript/array.html</title>
+</head>
+<body>
+    <script>
+        var ary = ['hong', 'kim', 'park'];
+        for (var i=0; i<ary.length; i++) {
+            ary[i];
+        }
+        ary[0] = 'hwang';
+        ary[1] = 'lee';
+        for (name of ary) {
+            console.log(name);
+        }
+
+        var ary2 = new Array('hong', 'kim', 'park');
+
+        var person = {
+            firstName: 'Kildong',
+            lastName: 'Hong',
+            age: 30
+        }
+
+        console.log(person.firstName);
+        console.log(person["firstName"]);
+        console.log("===============")
+        for(p in person) {
+            console.log("필드명: " + p + ", 값 : " + person[p]);
+        }
+
+        var fruits = ['banana', 'apple', 'orange', 'mango'];
+        document.write("<ul>");
+        // for (var i=0; i<fruits.length; i++) {
+        for (fruits of fruits) {   
+            document.write("<li>" + fruits[i] + "</li>")
+        }
+        document.write("</ul>");
+
+        fruits.forEach(function (a,b,c) {
+            console.log(a,b,c);
+            document.write("<li>" + a + "</li>");
+        }); 
+
+        var person = [];
+        var person1 = {
+            firstName: 'Kildong',
+            lastName: 'Hong',
+            age: 20
+        }
+
+        var person2 = {
+            firstName: 'Minki',
+            lastName: 'Hwang',
+            age: 25
+        }
+
+        var person3 = {
+            firstName: 'Songmi',
+            lastName: 'Park',
+            age: 15
+        }
+
+        persons[0] = person1;
+        persons.push(persons2);
+        persons.push(persons3);
+        
+        for (p of persons) {
+            console.log(p.firstName, p.lastName, p.age);
+        }
+
+        
+        persons.forEach(showTable(obj));
+
+
+        document.write("<table border='1'>");
+        persons.forEach(function (elm) {
+            document.write("<tr>");
+            document.write("<td>"
+                + elm.firstName + "</td><td>"
+                + elm.lastName + "</td><td>"
+                + elm.age + "</td>")
+            document.write("</tr>");
+        });
+        document.write("</table>");
+
+        // persons.forEach(function (obj, idx, ary) {
+
+        // });
+
+
+    </script>
+</body>
+</html>
